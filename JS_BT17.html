@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<form>
+
+            <p><td><input type="number" id="so1">
+            <input type="number" id="so2">
+     <br>
+            <p><input type="button" value="Addition(+)" onclick=cong()>
+            <input type="button" value="Subtraction(-)" onclick=tru()>
+            <input type="button" value="Multiplication(X)" onclick=nhan()>
+            <input type="button" value="Division(/)" onclick=chia()></p>
+        <br>
+
+            <p id="result"></p>
+
+</form>
+</body>
+</html>
+<script>
+    function cong(){
+        let a=+(document.getElementById('so1').value);
+        let b=+(document.getElementById('so2').value);
+        let y = x + 1
+        let x= 1
+            document.getElementById('result').innerHTML=cong;
+    }
+    function tru(){
+        let a=+(document.getElementById('so1').value);
+        let b=+(document.getElementById('so2').value);
+        let tru= a - b;
+        document.getElementById('result').innerHTML=tru;
+    }
+    function nhan(){
+        let a=+(document.getElementById('so1').value);
+        let b=+(document.getElementById('so2').value);
+        let nhan= a * b;
+        document.getElementById('result').innerHTML=nhan;
+    }
+    function chia(){
+        let a=+(document.getElementById('so1').value);
+        let b=+(document.getElementById('so2').value);
+        let chia= a / b;
+        document.getElementById('result').innerHTML=chia;
+    }
+</script>
