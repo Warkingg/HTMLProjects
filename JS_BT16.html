@@ -26,10 +26,10 @@
                         <option value="1">Việt Nam</option>
                     </select>
                 </td>
-                <td><input type="button" value="Convert" onclick=chuyentien()></td>
+                <td><input type="button" value="Convert" onclick= chuyentien()></td>
             </tr>
         </table>
-        <p id="result" style="color:blue">Result</p>
+        <p id="result" style="color:blue">Result : </p>
     </form>
 </body>
 </html>
@@ -38,8 +38,6 @@
         let amount= document.getElementById("amount").value;
         let from= document.getElementById("fromcurrency").value;
         let to=document.getElementById("tocurrency").value;
-        let result= amount*from/to;
-            document.getElementById("result").innertext=result;
+            document.getElementById("result").innerHTML=amount*from/to;
     }
-
 </script>
