@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Feet & Meters</title>
+</head>
+<body>
+    <h1> Feet & Meter Converter</h1>
+    <form>
+        <input type ="text" id="nhap">
+        <input type ="button" id="meters" value="Meters" onclick="foottoMetter()">
+        <input type ="button" id="foot" value="Feet" onclick="metertoFoot()">
+        <p id="result"></p>
+    </form>
+</body>
+</html>
+<script>
+    function foottoMetter(foot){
+            var meter = 0;
+            var foot = document.getElementById('nhap').value;
+            meter = 0.305 * foot;
+            document.getElementById('result').innerHTML= meter;
+    }
+    function metertoFoot(meter){
+        var foot = 0
+        var meter = document.getElementById('nhap').value;
+        foot = 3.279 * meter;
+        document.getElementById('result').innerHTML = foot;
+    }
+
+</script>
