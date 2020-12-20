@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doyouloveme</title>
+</head>
+<body>
+    <p><h1>Do you love me?</h1></p>
+    <input type ="button" id="y" value="YES" onclick="appear()">
+    <input type ="button" id="n" value="NO" onmouseover="move()">
+</body>
+</html>
+<script>
+    function appear(){
+        alert('<3')
+    }
+    function move(){
+        let m =document.getElementById('n').value;
+        m.style.left = match.floor(Math.random()*200) + 'px';
+        m.style.top = match.floor(Math.random()*200) + 'px';
+        document.getElementById('n').innerHTML
+    }
+</script>

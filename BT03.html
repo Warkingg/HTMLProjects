@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT03</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    let a = parseInt(prompt("Nhập phím bất kì : "))
+    let input = isNaN(a);
+    if (!input) {
+        alert('Số bạn nhập là '+ a)
+    } else {
+        document.getElementById('result').innerHTML='Phím bạn ấn không phải là 1 số');
+    }
+</script>

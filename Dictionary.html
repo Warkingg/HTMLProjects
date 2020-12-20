@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<form>
+    <input type="text" id="word">
+    <input type="button" id="search" value="Tìm Kiếm" onclick="show();">
+    <p id="display"></p>
+</form>
+
+</body>
+</html>
+<script>
+    function show() {
+        let eng = ['music','game','sport'];
+        let vi = ['âm nhạc','trò chơi','thể thao'];
+        let value = document.getElementById('word').value;
+        for (i = 0, j = 0  ; i < eng.length, j <vi.length; i++, j++) {
+            if (value == eng[i]) {
+                document.getElementById('display').innerHTML = vi[i];
+                break;
+            } else if (value == vi[i]) {
+                document.getElementById('display').innerHTML = eng[i];
+                break;
+            } else {
+                document.getElementById('display').innerHTML = 'not found';
+            }
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function checkPrime(num) {
+        if (num < 2) return false;
+        for (let i = 2; i <= (num - 1); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+    function displayNum(N) {
+        let num = +prompt("Nhap so:");
+        let count = 0;
+        for (let i = 1; i <= num; i++) {
+            if (count >= N) {
+                break;
+            }
+            if (checkPrime(i)) {
+                count++;
+                document.write(i+"<br>")
+            }
+        }
+    }
+    displayNum(20)
+</script>

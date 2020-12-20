@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT04</title>
+</head>
+<body>
+<form name="quiz">
+    <input type="radio" value="a" name="option" id="a">A. var 1x=10 <br>
+    <input type="radio" value="b" name="option" id="b">B. var x=10 <br>
+    <input type="radio" value="c" name="option" id="c">C. var x=10.0f <br>
+    <input type="radio" value="d" name="option" id="d">D. var x=”10″<br>
+    <input type="button" value="Submit" onclick="chon()">
+    <p id="result"></p>
+</form>
+
+</body>
+</html>
+<script>
+    function chon() {
+        let answer = document.quiz.option.value;
+        if (answer == 'c') {
+        document.getElementById('result').innerHTML="Lựa chọn sai";
+    }
+        else{
+            document.getElementById('result').innerHTML="Lựa chọn đúng";
+        }
+    }
+</script>

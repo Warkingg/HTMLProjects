@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_Trenlop</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /* Cho dãy số vô hạn hãy in ra số ở vị trí 105:
+    for (var i = 1; i > 0;i++)  {
+        if (i == 105) {
+            document.write(i);
+            break;
+        }
+    } */
+    /* Viết chương trình tính tổng của 20 số chẵn bắt đầu từ 12
+    let total = 0
+    let count = 1
+    for(i = 12;count <= 20 ; count++){
+        i= i +2
+        total += i
+    }
+    document.write(total); */
+    /*Viết chương trình tính tổng của 20 số 5,10,15....100
+    let total =0
+    let count = 1
+    for(i = 5; count<=20;count++){
+        i = i + 5;
+        total += i
+    }
+    document.write(total);*/
+  /*Viết chương trình in ra chữ: “Em có yêu anh không?”, Và cho người dùng nhập c (có) hoặc k (không).
+    let answer = null;
+    do{
+        answer = prompt("Em có yêu anh không ? ");
+    } while (answer != 'c') {
+        alert("Chuẩn")
+    } */
+    let iMax = 20;
+    let jMax = 10;
+    let f = new Array();
+
+    for (i = 0; i < iMax; i++) {
+        f[i] = new Array();
+        for (j = 0; j < jMax; j++) {
+            f[i][j] = 0;
+        }
+        console.log(f.length);
+    }
+</script>

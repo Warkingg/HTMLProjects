@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let a = parseInt(prompt("Enter the first score: "));
+    let b = parseInt(prompt("Enter the second score: "));
+    let c = parseInt(prompt("Enter the third score: "));
+    let grade
+    let TB = (a + b + c) / 3
+    if (TB >= 9) {
+        grade = "A";
+    } else if (7 <= TB && TB < 9) {
+        grade = "B";
+    } else if (5 <= TB && TB < 7) {
+        grade = "C";
+    } else {
+        grade = "D"
+    }
+    alert("Xếp loại " + grade)
+</script>
