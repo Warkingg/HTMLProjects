@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+</head>
+<body>
+<form>
+    <label for ="Bài1">Bài Một:</label><input type ="text" id="chuoi" name="Bai1">
+    <input type="button" value="Tính độ dài chuỗi nhập" onclick="dodai()"><br>
+    <p>Bài Hai:
+        <input type="button" value="Tính trung bình cộng" onclick="average()"></p>
+    <p>Bài Ba:
+        <input type="button" value="Tìm số lớn nhất" onclick="maxx()">
+        <input type="button" value="Tìm số nhỏ nhất" onclick="minn()"></p>
+    <p>Bài Bốn:
+        <input type="button" value="Nhân Chia Cộng Trừ Hai Số" onclick="caculator()"></p>
+    <p>Bài Năm
+        <input type="button" value="Kiểm tra số nguyên" onclick="integercheck()"></p>
+    <p>Bài Sáu:
+        <input type="button" value="Nhập tên của bạn" onclick="inputname()"></p>
+    <p>Bài Bảy:
+        <input type="button" value="Hiển Thị Mảng" onclick="showArray()">
+        <input type="button" value="Thêm phần tử mới vào mảng" onclick="addElements()"></p>
+    <p>Bài Tám:
+        <input type="button" value="Hiển Thị Mảng" onclick="showArray()">
+        <input type="button" value="Xóa phần tử trong mảng" onclick="eraseElements()"></p>
+    <p>Bài Chín:
+        <input type="button" value="Hiển Thị Mảng" onclick="showArray()">
+        <input type="button" value="Tìm kiếm phần tử trong mảng" onclick="findElements()"></p>
+    <p id ="result"></p>
+    <p id ="result2"></p>
+    <p id ="result3"></p>
+    <p id ="result4"></p>
+</form>
+
+</body>
+</html>
+<script>
+    function dodai() {
+        var string = document.getElementById('chuoi').value;
+        document.getElementById("result").innerHTML = 'Độ dài của chuỗi là:' + string.length;
+    }
+    function average(){
+        var arr = [];
+        var sum = 0
+        var count = 0
+        while(count < 6) {
+            var nhap = parseInt(prompt("Enter number"));
+            arr.push(nhap);
+            count++;
+        }
+        for (i = 0; i< arr.length; i++){
+            sum += arr[i]/arr.length;
+            document.getElementById("result").innerHTML = 'Trung bình cộng là:' + sum ;
+        }
+    }
+    function maxx(){
+            var arr = [];
+            var count = 0;
+            while(count < 6) {
+                var nhap = parseInt(prompt("Enter number"));
+                arr.push(nhap);
+                count++;
+            }
+            var max = arr[0];
+        for(i=0;i<arr.length;i++){
+            if(max < arr[i]){
+                max = arr[i];
+                document.getElementById("result").innerHTML= "Số lớn nhất là:" + max;
+            }
+            }
+    }
+    function minn(){
+        var arr = [];
+        var count = 0;
+        while(count < 6) {
+            var nhap = parseInt(prompt("Enter number"));
+            arr.push(nhap);
+            count++;
+        }
+        var min = arr[0];
+        for(i=0;i<arr.length;i++){
+            if(min > arr[i]){
+                min = arr[i];
+                document.getElementById("result").innerHTML="Số nhỏ nhất là: " + min;
+            }
+        }
+    }
+    function caculator(){
+        var a = parseInt(prompt("Enter the first number: "));
+        var b = parseInt(prompt("Enter the second number: "));
+        document.getElementById('result').innerHTML="Tổng hai số là:"+ (a+b);
+        document.getElementById('result2').innerHTML="Tích hai số là:"+ a*b;
+        document.getElementById('result3').innerHTML="Thương hai số là:"+ a/b;
+        document.getElementById('result4').innerHTML="Hiệu hai số là:"+ (a-b);
+    }
+    function integercheck(value){
+        var value = prompt("Nhập giá trị bất kì: ");
+        if (!isNaN(value) && parseInt(value)== parseFloat(value)) {
+            document.getElementById('result').innerHTML= value + " là số nguyên";
+        }else{
+            document.getElementById('result').innerHTML= value + " không phải là số nguyên";
+        }
+    }
+    function inputname(){
+        var nhap = prompt("Enter your name: ");
+        document.getElementById('result').innerHTML= "Xin chào " + nhap;
+    }
+    var arr = [89, 67, 2, 56, 92, 29, 5];
+    function showArray(){
+        document.getElementById('result').innerHTML= arr;
+    }
+    function addElements() {
+        var newArr = (prompt("Enter element: "))
+        arr.push(newArr);
+        document.getElementById('result').innerHTML= arr;
+    }
+    var elements = null;
+    function eraseElements(elements){
+        elements = prompt("Nhập phần tử bạn muốn xóa");
+        let found = false;
+        for(var i=0; i < arr.length ; i++){
+            if (elements == arr[i]){
+                arr.splice(i,1);
+                found = true;
+            }
+        }
+        if(found == false){
+            document.getElementById('result').innerHTML="Không có phần tử này"
+        }
+        else{
+            document.getElementById('result').innerHTML= arr;
+        }
+    }
+    function findElements(elements){
+        elements = prompt("Nhập phần tử bạn muốn tìm");
+        let found = false;
+        for(var i=0; i < arr.length ; i++){
+            if (elements == arr[i]){
+                found = true;
+                document.getElementById('result').innerHTML="Vị trí của phần tử này là " + (i+1);
+            }
+        }
+        if(found == false){
+            document.getElementById('result').innerHTML="Không có phần tử này"
+
+        }
+    }
+
+</script>
